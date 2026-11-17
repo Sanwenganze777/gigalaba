@@ -1,0 +1,10 @@
+[Unit]
+Description=Cache Proxy API
+After=network.target redis.service
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/cache-api/cache-api.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

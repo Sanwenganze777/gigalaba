@@ -1,0 +1,10 @@
+[Unit]
+Description=Backend API
+After=network.target postgresql.service
+
+[Service]
+ExecStart=/usr/local/bin/backend-api
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
